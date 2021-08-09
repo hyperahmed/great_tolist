@@ -23,6 +23,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
   @override
   void dispose() {
+    super.dispose();
     _nameController.dispose();
     _emailController.dispose();
     _passwordController.dispose();
@@ -142,7 +143,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     );
   }
 
-  _onRegisterClick() async {
+  _onRegisterClick()  {
     if (!_key.currentState.validate()) {
       setState(() {
         _autoValidation = AutovalidateMode.disabled;
